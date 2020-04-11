@@ -1,4 +1,4 @@
-#COVID-19 Singapore Visualisation
+# COVID-19 Singapore Visualisation
 
 While stuck at home during Circuit Breaker, I decided to build some visualisations of the situation! 
 
