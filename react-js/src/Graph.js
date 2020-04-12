@@ -9,7 +9,7 @@ import sickMale from "./images/male_patient.png";
 
 export const Graph = () => {
   const vizContainer = useRef(null);
-  const width = 2048;
+  const width = 4096;
   const height = 2048;
   useEffect(() => {
     if (vizContainer.current) {
@@ -109,11 +109,11 @@ export const Graph = () => {
 
         node
           .append("text")
-          .attr("dx", 40)
-          .attr("dy", "1em")
-          .attr("fill", "black")
-          .attr("font-family", "Roboto")
-          .text(d => (d.label.startsWith("Case") ? "" : d.label));
+          .attr("dx", d => (d.label.startsWith("Case") ? -10 : 40))
+          .attr("dy", d => (d.label.startsWith("Case") ? 15 : "1em"))
+          .attr("font-family", "Helvetica")
+          .attr("font-size", d => (d.label.startsWith("Case") ? 5 : 15))
+          .text(d => d.label);
 
         node.append("title").text(d => d.label);
 
@@ -142,9 +142,5 @@ export const Graph = () => {
         );
     }
   });
-  return (
-    <svg
-      ref={vizContainer}
-    />
-  );
+  return <svg ref={vizContainer} />;
 };
