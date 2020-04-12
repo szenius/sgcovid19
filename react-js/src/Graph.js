@@ -133,7 +133,6 @@ export const Graph = () => {
       };
 
       d3.select(vizContainer.current)
-        .append("svg")
         .attr("viewBox", [-width / 2, -height / 2, width, height])
         .call(chart)
         .call(svg =>
@@ -145,9 +144,6 @@ export const Graph = () => {
   });
   return (
     <svg
-      className="viz-component"
-      width={width}
-      height={height}
       ref={vizContainer}
     />
   );
