@@ -30,11 +30,8 @@ const drag = (node) => {
     .on("end", dragended);
 };
 
-export const draw = (viz, data) => {
-  const links = data.data.edges;
-  const nodes = data.data.nodes;
-
-  const simulation = d3
+export const createSimulation = ({ nodes, links }) => {
+  return d3
     .forceSimulation(nodes)
     .force(
       "link",
@@ -43,8 +40,10 @@ export const draw = (viz, data) => {
     .force("charge", d3.forceManyBody())
     .force("x", d3.forceX())
     .force("y", d3.forceY());
+};
 
-  const link = viz
+export const draw = (svg, simulation, { nodes, links }) => {
+  const link = svg
     .append("g")
     .selectAll("line")
     .data(links)
@@ -53,7 +52,7 @@ export const draw = (viz, data) => {
     .attr("stroke-opacity", 1)
     .attr("stroke-width", 3);
 
-  const node = viz
+  const node = svg
     .selectAll(".node")
     .data(nodes)
     .enter()
@@ -98,7 +97,7 @@ export const draw = (viz, data) => {
     });
   });
 
-  return viz.node();
+  return svg.node();
 };
 
 export const zoom = (node) =>
