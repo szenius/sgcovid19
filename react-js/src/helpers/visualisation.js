@@ -91,16 +91,25 @@ const drag = (node) => {
 };
 
 const getImage = (node) => {
-  switch (node.image) {
-    case "virus":
-      return virus;
-    case "female_recovered":
-      return recoveredFemale;
-    case "male_recovered":
-      return recoveredMale;
-    case "female_patient":
+  if (node.caseNum === -1) {
+    return virus;
+  }
+
+  if (node.isRecovered) {
+    switch (node.gender) {
+      case "F":
+        return recoveredFemale;
+      case "M":
+        return recoveredMale;
+      default:
+        return null;
+    }
+  }
+
+  switch (node.gender) {
+    case "F":
       return sickFemale;
-    case "male_patient":
+    case "M":
       return sickMale;
     default:
       return null;
