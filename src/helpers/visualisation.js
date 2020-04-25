@@ -18,22 +18,17 @@ export const createSimulation = ({nodes, links}) => {
 };
 
 export const draw = (svg, simulation, {nodes, links}) => {
+  simulation.stop();
   const link = svg
     .append('g')
     .selectAll('line')
-    .data(links)
+    .data(links, d => [d.source, d.target])
     .join('line')
     .attr('stroke', 'grey')
-    .attr('stroke-opacity', 1)
+    .attr('stroke-opacity', 0.6)
     .attr('stroke-width', 3);
 
-  const node = svg
-    .selectAll('.node')
-    .data(nodes)
-    .enter()
-    .append('g')
-    .attr('class', 'node')
-    .call(drag(simulation));
+  const node = svg.selectAll('.node').data(nodes).enter().append('g').attr('class', 'node');
 
   node
     .append('image')
@@ -44,6 +39,8 @@ export const draw = (svg, simulation, {nodes, links}) => {
     .attr('height', (d) => (d.id.startsWith('Case') ? 50 : 100));
 
   node.append('title').text((d) => d.label);
+
+  link.append('title').text((d) => d.label);
 
   simulation.on('tick', () => {
     link
@@ -57,33 +54,11 @@ export const draw = (svg, simulation, {nodes, links}) => {
     });
   });
 
+  simulation.nodes(nodes);
+  simulation.force('link').links(links);
+  simulation.alpha(1).restart();
+
   return svg.node();
-};
-
-export const zoom = (node) =>
-  d3.zoom().on('zoom', () => {
-    node.attr('transform', d3.event.transform);
-  });
-
-const drag = (node) => {
-  const dragstarted = (d) => {
-    if (!d3.event.active) node.alphaTarget(0.3).restart();
-    d.fx = d.x;
-    d.fy = d.y;
-  };
-
-  const dragged = (d) => {
-    d.fx = d3.event.x;
-    d.fy = d3.event.y;
-  };
-
-  const dragended = (d) => {
-    if (!d3.event.active) node.alphaTarget(0);
-    d.fx = null;
-    d.fy = null;
-  };
-
-  return d3.drag().on('start', dragstarted).on('drag', dragged).on('end', dragended);
 };
 
 const getImage = (node) => {

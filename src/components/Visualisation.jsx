@@ -1,6 +1,6 @@
 import React, {useEffect, useRef} from 'react';
 import * as d3 from 'd3';
-import {draw, zoom, createSimulation} from '../helpers/visualisation';
+import {draw, createSimulation} from '../helpers/visualisation';
 
 export const Visualisation = ({nodes, links}) => {
   const vizContainer = useRef(null);
@@ -11,8 +11,7 @@ export const Visualisation = ({nodes, links}) => {
       const simulation = createSimulation({nodes, links});
       d3.select(vizContainer.current)
         .attr('viewBox', [-width / 2, -height / 2, width, height])
-        .call((svg) => draw(svg, simulation, {nodes, links}))
-        .call((svg) => zoom(svg));
+        .call((svg) => draw(svg, simulation, {nodes, links}));
     }
   }, [nodes, links]);
   return <svg ref={vizContainer} />;
