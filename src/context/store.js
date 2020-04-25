@@ -5,7 +5,7 @@ export const SET_CASE_NUM = 'SET_CASE_NUM';
 export const SET_SLIDER_START = 'SET_SLIDER_START';
 export const SET_SLIDER_COMPLETE = 'SET_SLIDER_COMPLETE';
 
-const initialState = {caseNum: 6157, slider: false};
+const initialState = {caseNum: 1000, slider: false};
 
 export const store = createContext(initialState);
 const {Provider} = store;

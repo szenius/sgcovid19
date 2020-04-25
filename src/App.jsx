@@ -19,6 +19,7 @@ const App = () => {
   }, [caseNum, slider]);
   return (
     <div className="app">
+      <h2>COVID19 - Singapore</h2>
       <Visualisation nodes={nodes} links={links} />
       <CaseFilterSlider />
     </div>

@@ -46122,7 +46122,7 @@
       "caseNum": -1,
       "gender": null,
       "isRecovered": true,
-      "minCaseNum": 1
+      "minCaseNum": 76
     },
     {
       "id": "Cluster 1",
@@ -46138,7 +46138,7 @@
       "caseNum": -1,
       "gender": null,
       "isRecovered": true,
-      "minCaseNum": 1
+      "minCaseNum": 15
     },
     {
       "id": "Cluster 37",
@@ -46186,7 +46186,7 @@
       "caseNum": -1,
       "gender": null,
       "isRecovered": true,
-      "minCaseNum": 1
+      "minCaseNum": 19
     },
     {
       "id": "Cluster 8",
@@ -46274,7 +46274,7 @@
       "caseNum": -1,
       "gender": null,
       "isRecovered": true,
-      "minCaseNum": 1
+      "minCaseNum": 183
     },
     {
       "id": "Cluster 27",
@@ -53351,9 +53351,7 @@
     {
       "source": "Cluster 1",
       "target": "Cluster 2",
-      "label": "",
-      "sourceMinCaseNum": 2,
-      "targetMinCaseNum": 1
+      "label": ""
     },
     {
       "source": "Cluster 36",
@@ -53393,9 +53391,7 @@
     {
       "source": "Cluster 1",
       "target": "Cluster 3",
-      "label": "",
-      "targetMinCaseNum": 1,
-      "sourceMinCaseNum": 2
+      "label": ""
     },
     {
       "source": "Cluster 36",
@@ -53414,9 +53410,7 @@
     {
       "source": "Cluster 1",
       "target": "Cluster 4",
-      "label": "",
-      "sourceMinCaseNum": 2,
-      "targetMinCaseNum": 1
+      "label": ""
     },
     {
       "source": "Cluster 36",
@@ -54107,9 +54101,7 @@
     {
       "source": "Cluster 1",
       "target": "Cluster 14",
-      "label": "",
-      "sourceMinCaseNum": 2,
-      "targetMinCaseNum": 1
+      "label": ""
     },
     {
       "source": "Cluster 36",
@@ -70020,35 +70012,35 @@
       "target": "Case 183",
       "label": "",
       "targetMinCaseNum": 183,
-      "sourceMinCaseNum": 1
+      "sourceMinCaseNum": 183
     },
     {
       "source": "Cluster 14",
       "target": "Case 197",
       "label": "",
       "targetMinCaseNum": 197,
-      "sourceMinCaseNum": 1
+      "sourceMinCaseNum": 183
     },
     {
       "source": "Cluster 14",
       "target": "Case 199",
       "label": "",
       "targetMinCaseNum": 199,
-      "sourceMinCaseNum": 1
+      "sourceMinCaseNum": 183
     },
     {
       "source": "Cluster 14",
       "target": "Case 202",
       "label": "",
       "targetMinCaseNum": 202,
-      "sourceMinCaseNum": 1
+      "sourceMinCaseNum": 183
     },
     {
       "source": "Cluster 14",
       "target": "Case 187",
       "label": "",
       "targetMinCaseNum": 187,
-      "sourceMinCaseNum": 1
+      "sourceMinCaseNum": 183
     },
     {
       "source": "Case 183",
@@ -74346,91 +74338,91 @@
       "target": "Case 15",
       "label": "",
       "targetMinCaseNum": 15,
-      "sourceMinCaseNum": 1
+      "sourceMinCaseNum": 15
     },
     {
       "source": "Cluster 2",
       "target": "Case 17",
       "label": "",
       "targetMinCaseNum": 17,
-      "sourceMinCaseNum": 1
+      "sourceMinCaseNum": 15
     },
     {
       "source": "Cluster 2",
       "target": "Case 22",
       "label": "",
       "targetMinCaseNum": 22,
-      "sourceMinCaseNum": 1
+      "sourceMinCaseNum": 15
     },
     {
       "source": "Cluster 2",
       "target": "Case 23",
       "label": "",
       "targetMinCaseNum": 23,
-      "sourceMinCaseNum": 1
+      "sourceMinCaseNum": 15
     },
     {
       "source": "Cluster 2",
       "target": "Case 45",
       "label": "",
       "targetMinCaseNum": 45,
-      "sourceMinCaseNum": 1
+      "sourceMinCaseNum": 15
     },
     {
       "source": "Cluster 3",
       "target": "Case 76",
       "label": "",
       "targetMinCaseNum": 76,
-      "sourceMinCaseNum": 1
+      "sourceMinCaseNum": 76
     },
     {
       "source": "Cluster 3",
       "target": "Case 87",
       "label": "",
       "targetMinCaseNum": 87,
-      "sourceMinCaseNum": 1
+      "sourceMinCaseNum": 76
     },
     {
       "source": "Cluster 4",
       "target": "Case 19",
       "label": "",
       "targetMinCaseNum": 19,
-      "sourceMinCaseNum": 1
+      "sourceMinCaseNum": 19
     },
     {
       "source": "Cluster 4",
       "target": "Case 20",
       "label": "",
       "targetMinCaseNum": 20,
-      "sourceMinCaseNum": 1
+      "sourceMinCaseNum": 19
     },
     {
       "source": "Cluster 4",
       "target": "Case 24",
       "label": "Tour Guide",
       "targetMinCaseNum": 24,
-      "sourceMinCaseNum": 1
+      "sourceMinCaseNum": 19
     },
     {
       "source": "Cluster 4",
       "target": "Case 25",
       "label": "Worked at Diamond Industries\nJewellery Company at Harbour\nDrive which was visited by the\nsame tour group from Guangxi",
       "targetMinCaseNum": 25,
-      "sourceMinCaseNum": 1
+      "sourceMinCaseNum": 19
     },
     {
       "source": "Cluster 4",
       "target": "Case 34",
       "label": "",
       "targetMinCaseNum": 34,
-      "sourceMinCaseNum": 1
+      "sourceMinCaseNum": 19
     },
     {
       "source": "Cluster 4",
       "target": "Case 40",
       "label": "",
       "targetMinCaseNum": 40,
-      "sourceMinCaseNum": 1
+      "sourceMinCaseNum": 19
     },
     {
       "source": "Cluster 5",
