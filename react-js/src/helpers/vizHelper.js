@@ -1,34 +1,9 @@
 import * as d3 from "d3";
-import virus from "./images/virus.png";
-import recoveredFemale from "./images/green_woman.png";
-import recoveredMale from "./images/green_man.png";
-import sickFemale from "./images/red_woman.png";
-import sickMale from "./images/red_man.png";
-
-const drag = (node) => {
-  const dragstarted = (d) => {
-    if (!d3.event.active) node.alphaTarget(0.3).restart();
-    d.fx = d.x;
-    d.fy = d.y;
-  };
-
-  const dragged = (d) => {
-    d.fx = d3.event.x;
-    d.fy = d3.event.y;
-  };
-
-  const dragended = (d) => {
-    if (!d3.event.active) node.alphaTarget(0);
-    d.fx = null;
-    d.fy = null;
-  };
-
-  return d3
-    .drag()
-    .on("start", dragstarted)
-    .on("drag", dragged)
-    .on("end", dragended);
-};
+import virus from "../images/virus.png";
+import recoveredFemale from "../images/green_woman.png";
+import recoveredMale from "../images/green_man.png";
+import sickFemale from "../images/red_woman.png";
+import sickMale from "../images/red_man.png";
 
 export const createSimulation = ({ nodes, links }) => {
   return d3
@@ -62,22 +37,7 @@ export const draw = (svg, simulation, { nodes, links }) => {
 
   node
     .append("image")
-    .attr("xlink:href", (d) => {
-      switch (d.image) {
-        case "virus":
-          return virus;
-        case "female_recovered":
-          return recoveredFemale;
-        case "male_recovered":
-          return recoveredMale;
-        case "female_patient":
-          return sickFemale;
-        case "male_patient":
-          return sickMale;
-        default:
-          return d.image;
-      }
-    })
+    .attr("xlink:href", (d) => getImage(d))
     .attr("x", -20)
     .attr("y", -20)
     .attr("width", (d) => (d.id.startsWith("Case") ? 50 : 100))
@@ -104,3 +64,45 @@ export const zoom = (node) =>
   d3.zoom().on("zoom", () => {
     node.attr("transform", d3.event.transform);
   });
+
+const drag = (node) => {
+  const dragstarted = (d) => {
+    if (!d3.event.active) node.alphaTarget(0.3).restart();
+    d.fx = d.x;
+    d.fy = d.y;
+  };
+
+  const dragged = (d) => {
+    d.fx = d3.event.x;
+    d.fy = d3.event.y;
+  };
+
+  const dragended = (d) => {
+    if (!d3.event.active) node.alphaTarget(0);
+    d.fx = null;
+    d.fy = null;
+  };
+
+  return d3
+    .drag()
+    .on("start", dragstarted)
+    .on("drag", dragged)
+    .on("end", dragended);
+};
+
+const getImage = (node) => {
+  switch (node.image) {
+    case "virus":
+      return virus;
+    case "female_recovered":
+      return recoveredFemale;
+    case "male_recovered":
+      return recoveredMale;
+    case "female_patient":
+      return sickFemale;
+    case "male_patient":
+      return sickMale;
+    default:
+      return null;
+  }
+};

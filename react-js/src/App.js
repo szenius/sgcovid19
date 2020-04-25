@@ -1,7 +1,7 @@
 import React from "react";
-import "./global.css";
-import { Visualisation } from "./Visualisation";
-import { filterData } from "./dataHelpers";
+import "./css/global.css";
+import { Visualisation } from "./components/Visualisation";
+import { filterData } from "./helpers/dataHelper";
 import data from "./data/graph.json";
 
 function App() {
