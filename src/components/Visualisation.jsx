@@ -4,8 +4,8 @@ import {draw, zoom, createSimulation} from '../helpers/visualisation';
 
 export const Visualisation = ({nodes, links}) => {
   const vizContainer = useRef(null);
-  const width = 8192;
-  const height = 4096;
+  const width = 9000;
+  const height = 3500;
   useEffect(() => {
     if (vizContainer.current) {
       const simulation = createSimulation({nodes, links});
