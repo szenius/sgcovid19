@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import * as d3 from "d3";
-import { draw, zoom, createSimulation } from "../helpers/vizHelper.js";
+import { draw, zoom, createSimulation } from "../helpers/visualisation.js";
 
 export const Visualisation = (data) => {
   const vizContainer = useRef(null);
