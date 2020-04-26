@@ -2,7 +2,7 @@
 
 While stuck at home during Circuit Breaker, I decided to build some visualisations of the situation! 
 
-![Demo of COVID-19 Graph](https://drive.google.com/uc?id=1J_aa_SP9A0yB6tYQ73rWFeTsXfmR0_vQ)
+![Demo of COVID-19 Graph](https://drive.google.com/uc?id=1OYHLpk3Dn9HM2NBEF_sQ3SZzhyTsQUjn)
 
 ## User Guide: Visualise!
 This project is not hosted on the web at the moment as I am a poor fresh grad who can't afford to host things. However, you can build and run it in your local machine by doing the following:
