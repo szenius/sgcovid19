@@ -2,6 +2,7 @@ import React, {useContext, useState, useEffect} from 'react';
 import './css/global.css';
 import {Visualisation} from './components/Visualisation';
 import {CaseFilterSlider} from './components/CaseFilterSlider';
+import {Footer} from './components/Footer';
 import {filterData} from './helpers/filterData';
 import data from './data/graph.json';
 import {store} from './context/store';
@@ -22,6 +23,7 @@ const App = () => {
       <h2>COVID19 - Singapore</h2>
       <Visualisation nodes={nodes} links={links} />
       <CaseFilterSlider />
+      <Footer />
     </div>
   );
 };
