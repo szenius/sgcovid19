@@ -1,21 +1,10 @@
 # COVID-19 Singapore Visualisation
 
+[Live demo here](https://compassionate-allen-f19a7c.netlify.app/).
+
 While stuck at home during Circuit Breaker, I decided to build some visualisations of the situation! 
 
 ![Demo of COVID-19 Graph](https://drive.google.com/uc?id=1OYHLpk3Dn9HM2NBEF_sQ3SZzhyTsQUjn)
-
-## User Guide: Visualise!
-This project is not hosted on the web at the moment as I am a poor fresh grad who can't afford to host things. However, you can build and run it in your local machine by doing the following:
-
-1. Clone this project
-2. Run the following to install dependencies
-    ```
-    yarn
-    ```
-3. Run the following to start the visualisation in localhost
-    ```
-    yarn start
-    ```
 
 ## References
 * I was inspired by: [againstcovid19](https://www.againstcovid19.com/)
