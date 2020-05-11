@@ -1,6 +1,6 @@
 # COVID-19 Singapore Visualisation
 
-[Live demo here](https://compassionate-allen-f19a7c.netlify.app/).
+[Live demo here](https://sgcovid19.netlify.app/).
 
 While stuck at home during Circuit Breaker, I decided to build some visualisations of the situation! 
 
