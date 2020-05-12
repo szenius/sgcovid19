@@ -9,7 +9,7 @@ export const Footer = () => {
         Sze Ying
       </a>{' '}
       |{' '}
-      <a href="https://github.com/szenius/covid19sg-viz" target="_blank" rel="noopener noreferrer">
+      <a href="https://github.com/szenius/sgcovid19" target="_blank" rel="noopener noreferrer">
         Source code
       </a>
     </div>
